@@ -56,6 +56,7 @@ lda_model = gensim.models.LdaModel(
     eta=0.91,               # Symmetric topic-word
     random_state=42
 )
+```
 Validation:
 
 Coherence Score: 0.48 (c_v metric)
@@ -65,9 +66,7 @@ Perplexity: -9.472
 Visualization: pyLDAvis inter-topic distance maps
 
 Non-negative Matrix Factorization (NMF)
-python
-Copy
-Edit
+```python
 nmf_model = gensim.models.Nmf(
     corpus=corpus,
     id2word=id2word,
@@ -75,6 +74,7 @@ nmf_model = gensim.models.Nmf(
     random_state=100,
     passes=100
 )
+```
 Matrix Factorization:
 
 TF-IDF → W (term-topic) + H (topic-document)
@@ -83,7 +83,7 @@ Non-negativity constraints
 
 Output: Heatmaps + top-term visualizations
 
-4. Model Comparison & Interpretation
+## 4. Model Comparison & Interpretation
 Metric	LDA	NMF
 Topics	14	10
 Coherence	0.47	0.48
@@ -99,7 +99,7 @@ In silico drug discovery
 
 miRNA–mRNA interactions
 
-5. Tools & Libraries
+## 5. Tools & Libraries
 mermaid
 Copy
 Edit
@@ -122,7 +122,7 @@ pyLDAvis: Interactive topic visualization
 
 Matplotlib: Static visualizations (word clouds, heatmaps)
 
-6. Limitations & Future Work
+## 6. Limitations & Future Work
 Challenges:
 Short-text complexity (abstracts)
 
